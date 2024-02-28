@@ -4,7 +4,6 @@ unset readvalue
 [[ ! -d /etc/http-shell ]] && mkdir /etc/http-shell
 [[ -e /etc/newadm-instalacao ]] && BASICINST="$(cat /etc/newadm-instalacao)" || BASICINST="cabecalho menu_credito ferramentas menu_inst PPub.py usercodes payloads ssl paysnd.sh verifica PDirect.py v-local.log PGet.py ultrahost menu POpen.py shadowsocks.sh fai2ban PPriv.py"
 IVAR="/etc/http-instas"
-source <(curl -sSL https://raw.githubusercontent.com/Dealer-Dev/dealerBot/main/otros/msg) >/dev/null
 #!/bin/bash
 # menu maker (opciones 1, 2, 3,.....)
 flech='➮' cOlM='⁙' && TOP='‣' && TTini='=====>>►► 🐲' && cG='/c' && TTfin='🐲 ◄◄<<=====' && TTcent='💥' && RRini='【  ★' && RRfin='★  】' && CHeko='✅' && ScT='🛡️' && FlT='⚔️' && BoLCC='🪦' && ceLL='🧬' && aLerT='⚠️' && _kl1='ghkey' && lLaM='🔥' && pPIniT='∘' && bOTg='🤖' && kL10='tc' && rAy='⚡' && tTfIn='】' && TtfIn='【' tTfLe='►' && am1='/e' && rUlq='🔰' && h0nG='🍄' && lLav3='🗝️' && m3ssg='📩' && pUn5A='⚜' && p1t0='•' nib="${am1}${kL10}"
@@ -270,6 +269,8 @@ ports_() {
     echo -ne "$(msg -verd "  Keys Usadas") $(msg -azu " : ") " && msg -bra "\033[1;41m $(cat $IVAR) $porta"
     echo ""
 }
+
+source <(curl -sSL https://raw.githubusercontent.com/Dealer-Dev/dealerBot/main/otros/msg) >/dev/null
 
 SCPT_DIR="/etc/SCRIPT"
 [[ ! -e ${SCPT_DIR} ]] && mkdir ${SCPT_DIR}
@@ -797,13 +798,6 @@ menau() {
     PID_BGEN1=$(ps x | grep -v grep | grep "BotGen.sh")
     add_fun="${PID_BGEN1}"
     tittle
-    [[ -e /etc/valkey ]] && {
-        figlet -f smslant "$(cat </etc/valkey)" | lolcat
-        msg -bar
-    } || {
-        figlet -p -f smslant "@ChumoGH" | lolcat
-        msg -bar
-    }
     [[ ! $PID_GEN ]] && PID_GEN="\033[0;35m[\033[0;31mDETENIDO\033[0;35m]" || PID_GEN="\033[0;35m[\033[0;36mWORKING\033[0;35m]"
     [[ ! $PID_GEN1 ]] && PID_GEN1="\033[0;35m[\033[0;31m OFF \033[0;35m]" || PID_GEN1="\033[0;35m[\033[0;36m ON \033[0;35m]"
     [[ ! $PID_BGEN1 ]] && {
