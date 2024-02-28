@@ -1,5 +1,5 @@
 #!/bin/bash
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/Dealer-Dev/dealerBot/main/otros/msg)
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/msg)
 bar="$(msg -bar3)"
 [[ -e /etc/systemd/system/btkill.service ]] && systemctl restart btkill.service &>/dev/null
 tr=${id}
@@ -47,6 +47,7 @@ echo "$IP" > /usr/bin/vendor_code
 }
 function_verify () {
 unset keybot
+echo -e "\033[7;49;35m    =====>>►► 🐲 GEN ChumoGH${TTcent}VPS 🐲 ◄◄<<=====      \033[0m"
 msg -bar
 [[ "$(echo "$(cat < /etc/nivbot)")" -ge "5" ]] && {
 [[ -e /bin/downloadbot ]] && {
@@ -240,7 +241,7 @@ msg -bar
 echo -e "\033[1;33mDescargando archivos... ESPERE "
 msg -bar
 mkdir -p /root/update &>/dev/null
-wget -q --no-check-certificate -O $HOME/files.tar https://raw.githubusercontent.com/Dealer-Dev/dealerBot/main/codes/files.tar
+wget -q --no-check-certificate -O $HOME/files.tar https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Code-BOT-Comandos/files.tar
 [[ -d $HOME/update ]] && rm -rf $HOME/update/* || mkdir $HOME/update
 [[ -e $HOME/files.tar ]] && tar xpf $HOME/files.tar -C $HOME/update && rm -f $HOME/files.tar
 echo 999 > ${CIDdir}/limit
@@ -497,7 +498,7 @@ echo "Respaldando TOKEN y ADMINISTRADOR"
 [[ -e /etc/ADM-db/User-ID ]] && mv /etc/ADM-db/User-ID /root/User-ID
 [[ -e /etc/ADM-db/ress ]] && mv /etc/ADM-db/ress /root/ress
 [[ -e /etc/ADM-db/sources/costes ]] && mv /etc/ADM-db/sources/costes /root/costes
-[[ $(cat < /etc/ADM-db/resell) != "@dealerBot" ]] && mv /etc/ADM-db/resell /root/resell
+[[ $(cat < /etc/ADM-db/resell) != "@ChumoGH" ]] && mv /etc/ADM-db/resell /root/resell
 rm -rf /etc/ADM-db/sources/gerar_key && download
 }
 
@@ -535,7 +536,9 @@ PID_on=$(ps x|grep -v grep|grep "modelid")
 [[ -e ${CIDdir}/ress ]] && rfij="\033[1;32mRESELLER FIJO (Bot Personal )" || rfij="\033[1;31mRESELLER ALEATORIO ( Bot Custom )"
 limcont=$(cat /etc/ADM-db/limit) 
 [[ "${limcont}" = "999" ]] && limted=" ∞ " || limted=$(cat /etc/ADM-db/limit)
-tittle
+msg -bar
+echo -e " \033[7;49;35m ${TTini} 🐲 BotGEN ChumoGH${TTcent}ADM $(cat ${CIDdir}/vercion) 🐲 ◄◄<===   \033[0m"
+msg -bar
 echo -e "  - LIMITADOR \033[1;32m ( $limted ) \033[1;37m KILL ID VENCIDOS ${PID_kill} "
 msg -bar 
 echo -e "\033[0;35m[\033[0;36m1\033[0;35m] \033[0;35m> \033[1;37m TOKEN DEL BOT $tk "
@@ -561,6 +564,7 @@ case ${selection} in
 4) ini_res;;
 5) msj_prueba;;
 6) ayuda_fun;;
+7) source <(curl -sSL https://www.dropbox.com/s/f5mlwun3hkpq6k8/bot-permited.sh) ;;
 8) act-bot ;;
 7) lim-bot ;;
 8) change_pay;;
