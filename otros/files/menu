@@ -99,14 +99,14 @@ msg -bar3
 echo -e "\033[1;34m ${TOP}\033[1;31m TOTAL:\033[1;32m ${mem_total}\033[1;34m ${TOP} \033[1;31m Libre:\033[1;32m ${mem_free} \033[1;34m ${TOP} \033[1;31m Usada:\033[1;32m ${mem_used}"
 echo -e "\033[1;34m ${TOP}\033[1;31m Uso RAM:\033[1;32m${mem_used_percent} \033[1;34m${TOP}\033[1;31m Uso CPU:\033[1;32m${cpu_used} \033[1;34m ${TOP}\033[1;31m Cache:\033[1;32m ${mem_cache}" # $CPU"%"
 msg -bar3
-echo -e "\033[0;35m [${cor[2]}01\033[0;35m]\033[0;33m ${flech}${cor[3]} CONTROL USUARIOS (SSH/SSL/VMESS) "
-echo -e "\033[0;35m [${cor[2]}02\033[0;35m]\033[0;33m ${flech}${cor[3]}  HERRAMIENTAS (\033[0;34mBad/VPN$_badvpn${cor[3]}) (\033[0;34mTCP-SPEED$_tcpspeed${cor[3]})"
-echo -e "\033[0;35m [${cor[2]}03\033[0;35m]\033[0;33m ${flech}${cor[3]}\033[0;33m [!]${cor[3]} OPTIMIZAR VPS ${_opti}"
-echo -e "\033[0;35m [${cor[2]}04\033[0;35m]\033[0;33m ${flech}${cor[3]}\033[0;33m [!]\033[0;31m DESINSTALAR SCRIPT"
-echo -e "\033[0;35m [${cor[2]}06\033[0;35m]\033[0;33m ${flech}${cor[3]}  CONTADOR ONLINE USERS $VERIFICAR_PID"
-echo -e "\033[0;35m [${cor[2]}07\033[0;35m]\033[0;33m ${flech}${cor[3]} \e[3;32mHERRAMIENTAS BETA\e[0m \033[0;33m (#EXPERIMENTAL)"
-echo -e "\033[0;35m [${cor[2]}08\033[0;35m]\033[0;33m ${flech}${cor[3]} AUTOINICIAR SCRIPT $_autorun"
-echo -e "\033[0;35m [${cor[2]}09\033[0;35m]\033[0;33m ${flech}${cor[3]} INSTALADOR DE PROTOCOLOS "
+echo -e "\033[0;35m [${cor[2]}01\033[0;35m]\033[0;33m ${flech}${cor[3]} CONTROL DE USUARIOS (SSH/SSL/V2RAY) 🐰 "
+echo -e "\033[0;35m [${cor[2]}02\033[0;35m]\033[0;33m ${flech}${cor[3]} EXTRAS 🐇 (\033[0;34mBad/VPN$_badvpn${cor[3]}) (\033[0;34mTCP-SPEED$_tcpspeed${cor[3]})"
+echo -e "\033[0;35m [${cor[2]}03\033[0;35m]\033[0;33m ${flech}${cor[3]}\033[0;33m [!]${cor[3]} OPTIMIZAR VPS ${_opti} 🖥️"
+echo -e "\033[0;35m [${cor[2]}04\033[0;35m]\033[0;33m ${flech}${cor[3]}\033[0;33m [!]\033[0;31m DESINSTALAR SCRIPT 🚀"
+echo -e "\033[0;35m [${cor[2]}06\033[0;35m]\033[0;33m ${flech}${cor[3]} CONTADOR DE USUARIOS ONLINE $VERIFICAR_PID 📟"
+echo -e "\033[0;35m [${cor[2]}07\033[0;35m]\033[0;33m ${flech}${cor[3]} \e[3;32mHERRAMIENTAS \e[0m \033[0;33m (#EXPERIMENTAL) 🛠️"
+echo -e "\033[0;35m [${cor[2]}08\033[0;35m]\033[0;33m ${flech}${cor[3]} AUTOINICIAR SCRIPT $_autorun 🔁"
+echo -e "\033[0;35m [${cor[2]}09\033[0;35m]\033[0;33m ${flech}${cor[3]} ACTIVAR PROTOCOLOS ⚡"
 msg -bar3 
 echo -ne "\033[0;35m [${cor[2]}10\033[0;35m]\033[0;33m ${flech}\033[0;33m [!] ${cor[2]}UPDATE / \033[0;31mREMOVE${cor[3]}  |" && echo -e " \033[0;35m [${cor[2]}0\033[0;35m]\033[0;33m ⇦ $(msg -bra "\e[3;33m[ SALIR ]\e[0m")"
 msg -bar3  
@@ -163,7 +163,7 @@ trofix(){
 source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu/mod-v2ray.sh)
 }
 autoop(){
-[[ -e /root/name ]] && figlet -p -f smslant < /root/name | lolcat || echo -e "\033[7;49;35m    ${TTini} New ChumoGH${TTcent}VPS ${TTfin}      \033[0m"
+[[ -e /root/name ]] && figlet -p -f smslant < /root/name | lolcat || echo -e "\033[7;49;35m    SCRIPT RABBIT - BO      \033[0m"
 echo -e "\033[1;37m  ${RRini} Reseller : $(cat < /bin/ejecutar/menu_credito) 2022 ${RRfin}\033[0m"
 msg -bar3 
 echo -e "${cor[2]} \033[1;32mESTA FUNCION AGREGARA EN EL CRONTAB UN AUTOEJECUCION"
