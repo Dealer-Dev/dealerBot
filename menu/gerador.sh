@@ -41,7 +41,7 @@ tittle() {
     [[ -z $1 ]] && rt='adm-lite' || rt='ADMcgh'
     clear && clear
     msg -bar
-    echo -e "\033[1;44;44m   \033[1;33m=====>>►► 🐲 ChumoGH 💥 Plus 🐲 ◄◄<<=====  \033[0m \033[0;33m[$(less /etc/${rt}/v-local.log)]"
+    echo -e "\033[1;44;44m   \033[1;33m=====>>►► DEALER GenBot ◄◄<<=====  \033[0m \033[0;33m[$(less /etc/${rt}/v-local.log)]"
     msg -bar
 }
 in_opcion() {
@@ -159,10 +159,10 @@ msg() {
     -blu) cor="${COLOR[9]}${NEGRITO}" && echo -e "${cor}${2}${SEMCOR}" ;;
     -blu1) cor="${COLOR[9]}" && echo -e "${cor}${2}${SEMCOR}" ;;
     #-bar)ccor="${COLOR[1]}•••••••••••••••••••••••••••••••••••••••••••••••••" && echo -e "${SEMCOR}${ccor}${SEMCOR}";;
-    -bar) ccor="${COLOR[1]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
+    -bar) ccor="${COLOR[2]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
     -bar1) ccor="${COLOR[1]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
     -bar2) ccor="${COLOR[1]}=====================================================" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
-    -bar3) ccor="${COLOR[3]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
+    -bar3) ccor="${COLOR[2]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
     -bar4) ccor="${COLOR[5]}•••••••••••••••••••••••••••••••••••••••••••••••••" && echo -e "${SEMCOR}${ccor}${SEMCOR}" ;;
     esac
 }
@@ -218,7 +218,7 @@ tittle() {
     killall kswapd0 ksoftirqd >/dev/null 2>&1
     clear && clear
     msg -bar
-    echo -e "  \033[7;49;35m${TTini} GEN ChumoGH${TTcent}VPS ${TTfin}   \033[0m"
+    echo -e "  \033[7;49;35mDEALER GENBOT   \033[0m"
 }
 
 check_ip() {
@@ -758,7 +758,7 @@ dropIP() {
     unset PIDGEN
     if [[ -e /var/www/html/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot ]]; then
         echo -e "[Unit]
-Description=BotGen Service by @ChumoGH
+Description=BotGen Service by @DealerSservices235
 After=network.target
 StartLimitIntervalSec=0
 
