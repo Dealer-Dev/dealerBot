@@ -317,7 +317,7 @@ unset PIDGEN
 PIDGEN=$(ps aux|grep -v grep|grep "BotGen.sh")
 if [[ ! $PIDGEN ]]; then
 echo -e "[Unit]
-Description=BotGen Service by @ChumoGH
+Description=BotGen Service by @DealerServices235
 After=network.target
 StartLimitIntervalSec=0
 
@@ -397,13 +397,13 @@ ID="$(cat /etc/ADM-db/Admin-ID)"
 		echo -e "$bar"
 		read foo
 	} || {
-		MENSAJE="---------📩𝙈𝙀𝙉𝙎𝘼𝙅𝙀 𝙍𝙀𝘾𝙄𝘽𝙄𝘿𝙊📩--------\n"
-		MENSAJE+="Esto es un mesaje de prueba!\n"
+		MENSAJE="--BOT ACTIVO PAPU 🐰--\n"
+		MENSAJE+="EL BOT PASÓ LA PRUEBA\n"
 		MENSAJE+="$bar\n"
 		URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 		curl -s -X POST $URL -d chat_id=$ID -d text="$MENSAJE" &>/dev/null
 		clear
-		echo -e "---------📩𝙈𝙀𝙉𝙎𝘼𝙅𝙀 𝙍𝙀𝘾𝙄𝘽𝙄𝘿𝙊📩--------\n"
+		echo -e "--📩𝙈𝙀𝙉𝙎𝘼𝙅𝙀 ENVIADO📩--\n"
 		echo -e "\033[1;37m Mensaje enviado Exitosamente...!"
 		echo -e "$bar"
 		sleep 3s
@@ -498,7 +498,7 @@ echo "Respaldando TOKEN y ADMINISTRADOR"
 [[ -e /etc/ADM-db/User-ID ]] && mv /etc/ADM-db/User-ID /root/User-ID
 [[ -e /etc/ADM-db/ress ]] && mv /etc/ADM-db/ress /root/ress
 [[ -e /etc/ADM-db/sources/costes ]] && mv /etc/ADM-db/sources/costes /root/costes
-[[ $(cat < /etc/ADM-db/resell) != "@ChumoGH" ]] && mv /etc/ADM-db/resell /root/resell
+[[ $(cat < /etc/ADM-db/resell) != "@DealerServices235" ]] && mv /etc/ADM-db/resell /root/resell
 rm -rf /etc/ADM-db/sources/gerar_key && download
 }
 
@@ -537,7 +537,7 @@ PID_on=$(ps x|grep -v grep|grep "modelid")
 limcont=$(cat /etc/ADM-db/limit) 
 [[ "${limcont}" = "999" ]] && limted=" ∞ " || limted=$(cat /etc/ADM-db/limit)
 msg -bar
-echo -e " \033[7;49;35m ${TTini} 🐲 BotGEN ChumoGH${TTcent}ADM $(cat ${CIDdir}/vercion) 🐲 ◄◄<===   \033[0m"
+echo -e " \033[7;49;35m ${TTini} 🐰 BotGEN DEALER 🐰   \033[0m"
 msg -bar
 echo -e "  - LIMITADOR \033[1;32m ( $limted ) \033[1;37m KILL ID VENCIDOS ${PID_kill} "
 msg -bar 
