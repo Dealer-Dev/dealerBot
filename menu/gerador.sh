@@ -691,7 +691,7 @@ fum_ver() {
     msg -ne " \033[1;42mESTADO :\033[0m "
     [[ -e $HOME/list-key ]] && {
         echo -ne "  "
-        [[ $ofen = "KEY DE ChumoGH!" ]] &&
+        [[ $ofen = "KEY DEL DEALER!" ]] &&
             echo -e "KEY FUNCIONAL" && rm -f $HOME/list-key && echo -ne "\033[0m"
     } || echo -e " KEY INVALIDA O USADA\033[0m\n"
     #curl -s --connect-timeout 2 ${IiP}:81/${REQUEST}/menu_credito > menu_credito
