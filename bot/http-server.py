@@ -1,7 +1,7 @@
 #!/bin/bash
 IVAR="/etc/http-instas"
 onliCHECK=/var/www/html/ChumoGH
-LIST="$(echo "Rabbit-" | rev)"
+LIST="$(echo "NewVPS-" | rev)"
 [[ -d /var/www/html/ChumoGH ]] || mkdir ${onliCHECK}
 install_fun () {
 apt-get install netcat -y
