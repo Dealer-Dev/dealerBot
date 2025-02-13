@@ -104,7 +104,7 @@ function_verify() {
     unset keybot
     msg -bar
     [[ ! -e /etc/nivbot ]] && echo >/etc/nivbot
-    echo -e "\e[31m          BOTGEN LIBRE TE LO VENDIERON ?\e[32m"
+    echo -e "\e[31m          DIGITA SI, O ENTER\e[32m"
     [[ "$(echo "$(cat </etc/nivbot)")" < "3" ]] && {
         [[ -e /bin/downloadbot ]] && {
             [[ -z $(cat </bin/downloadbot) ]] && read -p " DIGITE SI O NO : " keybot || unset keybot
